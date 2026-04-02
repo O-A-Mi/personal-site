@@ -1,0 +1,254 @@
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 0 5%;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+
+.accentLine {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(var(--primary-rgb), 0.0) 10%,
+    rgba(var(--primary-rgb), 0.6) 50%,
+    rgba(var(--primary-rgb), 0.0) 90%,
+    transparent 100%
+  );
+}
+
+.accentLine::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40%;
+  height: 10px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(var(--primary-rgb), 0.25) 0%,
+    transparent 70%
+  );
+  filter: blur(4px);
+}
+
+.footerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.brandArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.brandLogo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(var(--primary-rgb), 0.4);
+  box-shadow: 0 0 20px rgba(var(--primary-rgb), 0.15);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.brandLogo:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 30px rgba(var(--primary-rgb), 0.3);
+}
+
+.brandName {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.brandTagline {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+  margin-top: -8px;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.socialLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(20, 20, 20, 0.5);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.socialLink::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at center,
+    rgba(var(--primary-rgb), 0.12) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.socialLink:hover {
+  border-color: rgba(var(--primary-rgb), 0.5);
+  color: #ffffff;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(var(--primary-rgb), 0.2),
+              0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.socialLink:hover::before {
+  opacity: 1;
+}
+
+.socialLink svg {
+  position: relative;
+  z-index: 1;
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socialLink:hover svg {
+  transform: scale(1.15);
+}
+
+.socialLabel {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--primary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease, bottom 0.3s ease;
+  pointer-events: none;
+}
+
+.socialLink:hover .socialLabel {
+  opacity: 1;
+  bottom: -28px;
+}
+
+.divider {
+  width: 100%;
+  max-width: 500px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.06) 30%,
+    rgba(255, 255, 255, 0.06) 70%,
+    transparent
+  );
+}
+
+.copyright {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.copyrightText {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.copyrightHighlight {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.copyrightSubtext {
+  font-size: 0.7rem;
+  color: rgba(163, 163, 163, 0.5);
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 60px;
+    padding-bottom: 32px;
+  }
+
+  .footerContent {
+    gap: 36px;
+  }
+
+  .brandName {
+    font-size: 1.25rem;
+  }
+
+  .socialLinks {
+    gap: 12px;
+  }
+
+  .socialLink {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  .socialLink svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .accentLine {
+    width: 80%;
+  }
+
+  .socialLinks {
+    gap: 10px;
+  }
+
+  .socialLink {
+    width: 44px;
+    height: 44px;
+  }
+}
