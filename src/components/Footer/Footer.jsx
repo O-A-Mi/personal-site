@@ -81,7 +81,7 @@ const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer ref={ref} className={styles.footer}>
+    <footer id="social-links" ref={ref} className={styles.footer}>
       <div className={styles.accentLine} />
       
       <motion.div

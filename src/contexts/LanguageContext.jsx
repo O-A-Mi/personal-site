@@ -10,22 +10,28 @@ const translations = {
       title: 'Obras em Destaque',
       altPrefix: 'Arte',
     },
-    about: {
-      title: 'Sobre Mim',
-      text: 'Sou artista digital e ilustrador, apaixonado por dar vida a personagens e mundos através da arte. Cada ilustração é uma história contada com cores, formas e emoção — do concept art à peça final, meu objetivo é criar imagens que conectam e inspiram.',
-    },
+    about: [
+      {
+        title: 'Sobre Mim',
+        text: 'Sou artista digital e ilustrador, apaixonado por dar vida a personagens e mundos através da arte. Cada ilustração é uma história contada com cores, formas e emoção — do concept art à peça final, meu objetivo é criar imagens que conectam e inspiram.',
+      },
+      {
+        title: 'Contato',
+        text: 'Entre em contato através do email: <b>o.ou.a.mis@gmail.com</b> <br /> <a href="#social-links">ou pelas redes sociais!</a>',
+      }
+    ],
     characters: [
       {
-        title: 'Guerreiro Sombrio',
-        desc: 'Uma alma forjada nas trevas, este guerreiro carrega o peso de batalhas incontáveis. Sua determinação é inabalável e sua presença inspira temor.',
+        title: 'Criação de Personagens',
+        desc: 'Realizo criação de personagens originais para jogos, animações, livros, TTRPGs e projetos pessoais. Os desenhos iniciais são feitos digitalmente, com rascunhos e estudos de cores para garantir que o personagem seja único e memorável.',
       },
       {
-        title: 'Mago Arcano',
-        desc: 'Domina as artes arcanas com maestria incomparável. Cada gesto tece feitiços ancestrais que distorcem a própria realidade ao seu redor.',
+        title: 'Rascunho a Renderização',
+        desc: 'Transformo ideias em arte final, desde o rascunho inicial até a renderização final. Com atenção aos detalhes e foco em cores vibrantes, crio artes que buscam causar sentimentos positivos e inspirar pessoas.',
       },
       {
-        title: 'Lâmina Noturna',
-        desc: 'Silenciosa como a noite, letal como a aurora. Move-se entre as sombras com graça mortal, deixando apenas ecos de sua passagem.',
+        title: 'Idealização e Worldbuilding',
+        desc: 'Desenvolvo conceitos visuais e narrativas para personagens, cenários e histórias. Meu processo inclui pesquisa, criação de moodboards, rascunhos e refinamento até a arte final, garantindo que cada elemento contribua para um universo coeso e envolvente.',
       },
     ],
     footer: {
@@ -44,22 +50,28 @@ const translations = {
       title: 'Featured Artworks',
       altPrefix: 'Art',
     },
-    about: {
-      title: 'About Me',
-      text: "I'm a digital artist and illustrator, passionate about bringing characters and worlds to life through art. Each illustration is a story told with colors, shapes, and emotion — from concept art to the final piece, my goal is to create images that connect and inspire.",
-    },
+    about: [
+      {
+        title: 'About Me',
+        text: "I'm a digital artist and illustrator, passionate about bringing characters and worlds to life through art. Each illustration is a story told with colors, shapes, and emotion — from concept art to the final piece, my goal is to create images that connect and inspire.",
+      },
+      {
+        title: 'Contact',
+        text: 'Contact me through email: <b>o.ou.a.mis@gmail.com</b> <br /> <a href="#social-links">or through social media!</a>',
+      }
+    ],
     characters: [
       {
-        title: 'Dark Warrior',
-        desc: 'A soul forged in darkness, this warrior carries the weight of countless battles. Their determination is unwavering and their presence inspires dread.',
+        title: 'Character Creation',
+        desc: 'I create original characters for games, animations, books, TTRPGs, and personal projects. Initial designs are done digitally, with sketches and color studies to ensure each character is unique and memorable.',
       },
       {
-        title: 'Arcane Mage',
-        desc: 'Masters the arcane arts with unparalleled skill. Each gesture weaves ancestral spells that distort reality itself.',
+        title: 'Sketch to Render',
+        desc: 'I transform ideas into final art, from the initial sketch to the final render. With attention to detail and a focus on vibrant colors, I create art that aims to evoke positive feelings and inspire people.',
       },
       {
-        title: 'Night Blade',
-        desc: 'Silent as the night, lethal as the dawn. Moves through the shadows with deadly grace, leaving only echoes of their passage.',
+        title: 'Conceptualization and Worldbuilding',
+        desc: 'I develop visual concepts and narratives for characters, settings, and stories. My process includes research, moodboard creation, sketching, and refinement through to the final artwork, ensuring every element contributes to a cohesive and engaging universe.',
       },
     ],
     footer: {

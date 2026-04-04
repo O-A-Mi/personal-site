@@ -6,7 +6,7 @@ import styles from './HeroSection.module.css';
 const HeroSection = () => {
   const ref = useRef(null);
   const { t } = useLanguage();
-
+  console.log(t);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],

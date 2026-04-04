@@ -9,17 +9,21 @@ const AboutSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section ref={ref} className={styles.aboutContainer}>
-      <motion.div 
-        className={`${styles.glassBox} liquid-glass`}
-        initial={{ opacity: 0, scale: 0.9, y: 50 }}
-        animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.9, y: 50 }}
-        transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
-      >
-        <h2>{t.about.title}</h2>
-        <p>{t.about.text}</p>
-      </motion.div>
-    </section>
+    t.about.map((about, index) => (
+      <section ref={ref} className={styles.aboutContainer}>
+        <motion.div
+          className={`${styles.glassBox} liquid-glass`}
+          initial={{ opacity: 0, scale: 0.9, y: 50 }}
+          animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.9, y: 50 }}
+          transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+        >
+          <div key={index}>
+            <h2>{about.title}</h2>
+            <p dangerouslySetInnerHTML={{ __html: about.text }} />
+          </div>
+        </motion.div>
+      </section>
+    ))
   );
 };
 
