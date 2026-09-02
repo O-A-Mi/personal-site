@@ -1,6 +1,5 @@
 import { ReactLenis } from 'lenis/react';
 import { LanguageProvider } from './contexts/LanguageContext';
-import './assets/fa-essentials.css';
 import styles from './App.module.css';
 import { Analytics } from "@vercel/analytics/react"
 

@@ -1,64 +1,78 @@
-# 🎨 O MI — Portfólio Digital
+# O MI — Portfólio Digital
 
-Portfólio pessoal do artista digital **O MI**, construído com React + Vite. Apresenta ilustrações e artes digitais em um site imersivo com scroll-driven animations e design "liquid glass" em dark mode.
+Experiência web responsiva para apresentar ilustrações, personagens e serviços do
+artista digital O MI com uma navegação visual, bilíngue e orientada a movimento.
 
-## ✨ Features
+> Projeto em preparação para publicação. O endereço da demonstração será
+> adicionado após o deploy.
 
-- **Internacionalização automática** — Detecta o idioma do navegador e alterna entre pt-BR e en-US  
-- **Scroll-driven animations** — Parallax, fade-in e motion effects via Framer Motion  
-- **Smooth scrolling** — Integração com Lenis para uma experiência de rolagem fluida  
-- **Liquid Glass design** — Glassmorphism com backdrop-filter, bordas translúcidas e acentos em `#e8006c`  
-- **Mobile-first** — Layout responsivo em todas as seções  
-- **Galeria de arte** — Destaque em formato 3:4 com hover effects  
-- **Showcases de personagens** — Seções com parallax individual por personagem  
+## Proposta
 
-## 🛠 Tech Stack
+Portfólios artísticos precisam valorizar as obras sem transformar a interface em
+uma galeria genérica. Este projeto propõe uma apresentação imersiva que combina
+hierarquia visual, animações suaves e uma experiência consistente em telas
+grandes e dispositivos móveis.
 
-| Camada      | Tecnologia                         |
-|-------------|------------------------------------|
-| Framework   | React 19 + Vite 8                  |
-| Animação    | Framer Motion 12                   |
-| Scroll      | Lenis (smooth scroll)              |
-| Roteamento  | React Router DOM 7                 |
-| Estilo      | CSS Modules + CSS Custom Properties|
-| Tipografia  | Inter + Montserrat (Google Fonts)  |
+Leia a proposta completa em [PROPOSTA.md](PROPOSTA.md).
 
-## 📁 Estrutura
+## Principais recursos
 
-```
+- Conteúdo em português e inglês conforme o idioma do navegador.
+- Seção inicial com parallax e direção visual própria.
+- Galeria responsiva com destaque para obras em proporção vertical.
+- Apresentação de personagens com narrativa e movimento.
+- Rolagem suave com Lenis e animações com Framer Motion.
+- Separação entre licença do código e direitos das obras.
+
+## Stack
+
+| Área | Tecnologias |
+|---|---|
+| Interface | React 19, Vite 8, React Router |
+| Movimento | Framer Motion, Lenis |
+| Estilos | CSS Modules, propriedades CSS personalizadas |
+| Qualidade | ESLint, build Vite |
+| Métricas | Vercel Analytics |
+
+## Estrutura
+
+```text
 src/
-├── contexts/
-│   └── LanguageContext.jsx    # Context de idioma (pt-BR / en-US)
-├── components/
-│   ├── HeroSection/           # Banner full-screen com parallax
-│   ├── GallerySection/        # Grade 3:4 com obras em destaque
-│   ├── AboutSection/          # Sobre mim (liquid glass card)
-│   ├── CharacterShowcaseSection/  # Personagens com texto + imagem
-│   └── Footer/                # Footer com links sociais
-├── assets/
-│   └── fa-essentials.css      # Ícones FontAwesome
-├── App.jsx                    # Componente raiz
-├── main.jsx                   # Entry point
-└── index.css                  # Design tokens e estilos globais
+├── components/        # Seções visuais e componentes da página
+├── contexts/          # Idioma e conteúdo localizado
+├── App.jsx            # Composição da experiência
+├── main.jsx           # Inicialização React
+└── index.css           # Tokens e estilos globais
+
+public/                # Obras e identidade visual
 ```
 
-## 🚀 Desenvolvimento
+## Executar localmente
 
 ```bash
 npm install
 npm run dev
 ```
 
-## 📦 Build de Produção
+## Validar e gerar a versão de produção
 
 ```bash
+npm run lint
 npm run build
 npm run preview
 ```
 
-## 📬 Contato
+Lint e build de produção foram executados com sucesso no estado documentado.
+
+## Contato do artista
 
 - Instagram: [@oa._mi](https://instagram.com/oa._mi)
 - Artistree: [oami](https://artistree.io/oami)
 - GitHub: [O-A-Mi](https://github.com/O-A-Mi)
-- Email: o.ou.a.mis@gmail.com
+- E-mail: `o.ou.a.mis@gmail.com`
+
+## Licenças e direitos autorais
+
+O código-fonte é distribuído sob a licença MIT. As obras, personagens, logotipos
+e demais imagens em `public/` não fazem parte dessa licença e não podem ser
+reutilizados sem autorização. Consulte [LICENSE](LICENSE) e [ASSETS.md](ASSETS.md).
